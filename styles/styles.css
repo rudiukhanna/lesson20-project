@@ -166,7 +166,22 @@ header::after {
   border-radius: 20px;
   padding: 110px 25px;
 }
+.services-card:hover {
+  cursor: pointer;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  animation-name: cardEnlarge;
+  animation-duration: 2s;
+  animation-fill-mode: ease-out;
+}
 
+@keyframes cardEnlarge {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
 .card-bicycle {
   padding: 116px 14px;
 }

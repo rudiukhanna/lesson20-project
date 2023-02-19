@@ -213,12 +213,33 @@ header {
     color: var(--secondary-color);
 }
 
+@mixin cardEnlarge ($fill) {
+    animation-name: cardEnlarge;
+    animation-duration: 2s;
+    animation-fill-mode: $fill;
+}
+
 .services-card {
     max-width: 288px;
     box-sizing: border-box;
     background-color: var(--secondary-color);
     border-radius: 20px;
     padding: 110px 25px;
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        @include cardEnlarge($fill);
+    }
+}
+
+@keyframes cardEnlarge {
+    from {
+        transform: scale(1);
+    }
+        to {
+        transform: scale(1.5);
+        }
 }
 
 .card-bicycle {
