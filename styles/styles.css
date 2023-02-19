@@ -1,0 +1,323 @@
+:root {
+  --primary-color: #663128;
+  --accent-color: #F3CE5E;
+  --secondary-color: #FFFFFF;
+  --contact-text-color: #333333;
+  --section-title-color: #7C4032;
+  --input-field-color: #E6AF99;
+  --footer-bottom-color: #55352D;
+  --bcg-color: #FEF4DE;
+  --xs: 14px;
+  --s: 16px;
+  --m: 18px;
+  --l: 58px;
+  --xl: 64px;
+  --xxl: 115px;
+  --max-width: 1920px;
+}
+
+.page {
+  margin: auto;
+  padding: 0 30px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--primary-color);
+}
+
+.container {
+  max-width: 1224px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.link-button {
+  display: inline-block;
+  margin-top: 30px;
+  box-shadow: 0px 20px 40px rgba(243, 206, 94, 0.2);
+  border-radius: 57px;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  height: 66px;
+  padding-left: 68px;
+  padding-right: 68px;
+  line-height: 3.6;
+  font-weight: 700;
+  font-size: var(--m);
+  text-transform: capitalize;
+}
+.link-button:hover, .link-button:focus {
+  opacity: 0.8;
+  transition: 1s;
+  color: var(--contact-text-color);
+}
+
+h2 {
+  margin: 0;
+  padding-top: 65px;
+  padding-bottom: 50px;
+  text-align: center;
+  font-weight: 900;
+  font-size: var(--xl);
+  line-height: 1.5;
+  color: var(--section-title-color);
+  text-transform: uppercase;
+}
+
+.center {
+  margin: 50px 505px;
+}
+
+header {
+  background: url("../img/bcg/bcg-header/header-vectors.png") no-repeat center center/cover;
+  background-color: var(--bcg-color);
+  position: relative;
+}
+header::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: url("../img/bcg/bcg-header/top.png") no-repeat top right, url("../img/bcg/bcg-header/bottom.png") no-repeat bottom left;
+}
+
+.header-wrapper {
+  padding: 180px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-content h1 {
+  display: inline;
+  margin: 0;
+  font-weight: 900;
+  font-size: var(--xxl);
+  line-height: 1.18;
+}
+
+.header-title-second {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: var(--xl);
+  line-height: 1;
+  letter-spacing: 0.35em;
+}
+
+.header-content p {
+  margin: 0;
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: var(--s);
+  line-height: 1.5;
+}
+
+.header-links {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+.header-links .link-about {
+  margin-top: 30px;
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: var(--m);
+  line-height: 1.3;
+  text-transform: capitalize;
+}
+.header-links .link-about:hover, .header-links .link-about:focus {
+  text-decoration: underline;
+}
+
+.services {
+  background-color: var(--section-title-color);
+}
+
+.services-title {
+  color: var(--secondary-color);
+}
+
+.services-card {
+  max-width: 288px;
+  box-sizing: border-box;
+  background-color: var(--secondary-color);
+  border-radius: 20px;
+  padding: 110px 25px;
+}
+
+.card-bicycle {
+  padding: 116px 14px;
+}
+
+.services-grid {
+  display: grid;
+  grid-column-gap: 16px;
+  grid-row-gap: 1em;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.testymonials {
+  background-color: var(--bcg-color);
+  background-image: url("../img/bcg/bcg-testymonials/testymonials-bcg.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.testymonials-grid {
+  padding: 0 72px;
+  display: grid;
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.testymonials-card {
+  max-width: 512px;
+  padding: 20px 50px;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--section-title-color);
+  border-radius: 30px;
+}
+.testymonials-card h3 {
+  font-weight: 900;
+  font-size: var(--s);
+  line-height: 1.5;
+  color: var(--section-title-color);
+}
+.testymonials-card p {
+  font-size: var(--xs);
+  color: var(--contact-text-color);
+  line-height: 1.4;
+}
+
+.footer-wrapper-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 218px;
+  align-items: center;
+}
+
+.field {
+  margin-bottom: 14px;
+}
+
+.field-btn {
+  margin-left: 103px;
+  margin-bottom: 50px;
+}
+
+.footer-field {
+  width: 374px;
+  height: 56px;
+  background-color: var(--input-field-color);
+  border-radius: 61px;
+  border: none;
+  cursor: pointer;
+  color: var(--contact-text-color);
+  font-family: "TT Hoves", sans-serif;
+  font-size: var(--xs);
+  line-height: 1.2;
+  padding-left: 20px;
+}
+
+.footer-btn {
+  width: 168px;
+  height: 56px;
+  border: 3px solid var(--section-title-color);
+  border-radius: 61px;
+  font-family: "TT Hoves", sans-serif;
+  font-size: var(--m);
+  color: var(--contact-text-color);
+  background-color: var(--secondary-color);
+  font-size: var(--m);
+  cursor: pointer;
+}
+.footer-btn:hover {
+  opacity: 0.8;
+  background-color: var(--input-field-color);
+}
+
+.footer-link {
+  padding-left: 40px;
+  background-position: left center;
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+}
+
+.email-link {
+  background-image: url("../img/svg/contact/email.svg");
+}
+
+.phone-link {
+  background-image: url("../img/svg/contact/phone.svg");
+}
+
+.address-link {
+  padding-top: 5px;
+  background-image: url("../img/svg/contact/location.svg");
+}
+
+.footer-contact-list {
+  margin-bottom: 70px;
+}
+.footer-contact-list li {
+  margin-bottom: 40px;
+}
+.footer-contact-list a {
+  font-family: "TT Hoves", sans-serif;
+  font-weight: 500;
+  font-size: var(--xs);
+  line-height: 1.2;
+  color: var(--contact-text-color);
+}
+
+.footer-bottom {
+  height: 117px;
+  background-color: var(--footer-bottom-color);
+}
+
+.footer-bottom-copyright {
+  color: var(--secondary-color);
+  text-align: center;
+  padding-top: 50px;
+}
+
+.action-page {
+  position: fixed;
+  top: calc(50% - 200px);
+  left: calc(50% - 125px);
+  height: 350px;
+  width: 350px;
+  font-family: "Poppins", sans-serif;
+  font-size: var(--m);
+  background: var(--bcg-color);
+  background-image: url("../img/bcg/bcg-header/header-vectors.png");
+  border-radius: 20px;
+  box-shadow: 0px 5px 10px 0px rgba(19, 2, 2, 0.151);
+  color: var(--primary-color);
+}
+.action-page p {
+  font-weight: 500;
+  font-size: var(--s);
+  text-align: center;
+}
+
+.action-page-title {
+  padding-top: 150px;
+  text-align: center;
+}/*# sourceMappingURL=styles.css.map */
