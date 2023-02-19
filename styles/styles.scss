@@ -23,10 +23,6 @@
     max-width: 1224px;
     margin-left: auto;
     margin-right: auto;
-
-    @media screen and (min-width:1024px) and ( max-width: 1920px) {
-       margin: auto;
-    }
 }
 
 li {
@@ -60,11 +56,8 @@ a {
         transition: 1s;
         color: var(--contact-text-color);
     }
-
-    @media screen and (min-width:1024px) and ( max-width: 1920px) {
-        height: 66px;
     }
-}
+
 
 h2 {
     margin: 0;
@@ -84,15 +77,10 @@ h2 {
     display: flex;
     justify-content: center;
     padding-bottom: 50px;
-
-    @media screen and (min-width:1024px) and ( max-width: 1920px) {
-        padding-bottom: 50px;
-        vertical-align: middle;
-    }
 }
 
 // Header
-// Варіант 1 - додавання цих вуглів через псевдоелемент як фонові картинки;
+// Варіант 1 - додавання цих кутків через псевдоелемент як фонові картинки;
 header {
         background: {
             image: url('../img/bcg/bcg-header/header-vectors.png');
@@ -114,7 +102,7 @@ header {
         }
 
 
-// Варіант 2 - фонові вугли як лінійний градієнт (виникає конфлікт фонів);
+// Варіант 2 - фонові кутки як лінійний градієнт (виникає конфлікт фонів);
 // header {
 //     background: {
 //         image: url('../img/bcg/bcg-header/header-vectors.png');
@@ -137,7 +125,7 @@ header {
 //     }
 // }
 
-//  Варіант 3 - фонові вугли як фон, але тоді фон з векторами накладається на градієнт;
+//  Варіант 3 - фонові кутки як фон, але тоді фон з векторами накладається на градієнт;
 
 // header {
 //     background: {
@@ -147,19 +135,11 @@ header {
 //     }
 // }
 
-
 .header-wrapper {
     padding: 180px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    @media screen and ( min-width: 1024px) and ( max-width: 1300px) {
-        padding: 180px 50px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
 }
 
     .header-content {
@@ -171,16 +151,7 @@ header {
                 size: var(--xxl);
             }
             line-height: 1.18;
-
-            @media screen and ( min-width: 1024px) and ( max-width: 1300px)  {
-                font: {
-                    weight: 900;
-                    size: var(--l);
-                }
-                line-height: 1;
-            }
         }
-
     }
 
             .header-title-second {
@@ -192,15 +163,6 @@ header {
                 }
                 line-height: 1;
                 letter-spacing: 0.35em;
-
-                @media screen and ( min-width: 1024px) and ( max-width: 1300px)  {
-                    font: {
-                        weight: 500;
-                        size: var(--l);
-                    }
-                    line-height: 1;
-                    letter-spacing: 0em;
-                }
             }
         
     
@@ -213,15 +175,7 @@ header {
                 size: var(--s);
             }
             line-height: 1.5;
-
-            @media screen and ( min-width: 1024px) and ( max-width: 1300px)  {
-                font: {
-                    weight: 600;
-                    size: var(--xs);
-                }
-            }
         }
-
     }
     
     .header-links {
@@ -245,17 +199,10 @@ header {
         &:hover,
         &:focus {
         text-decoration: underline;
-    }
+            }
+        }
     }
 
-}
-
- .image-hero {
-    
-    @media screen and ( min-width: 1024px) and ( max-width: 1300px) {
-       width: 345px;
-    }
-}
 
      // Services
 .services {
@@ -417,6 +364,10 @@ header {
         }
         line-height: 1.2;
         color: var(--contact-text-color);
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 } 
 
@@ -430,6 +381,9 @@ header {
     text-align: center;
     padding-top: 50px;
 }
+
+
+@import 'media';
 
 // Action page
 .action-page {
