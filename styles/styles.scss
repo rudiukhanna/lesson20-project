@@ -71,24 +71,61 @@ h2 {
 }
 
 // Header
+// Варіант 1 - додавання цих вуглів через псевдоелемент як фонові картинки;
 header {
-    background: url('../img/bcg/bcg-header/header-vectors.png') no-repeat center center/cover;
-    background-color: var(--bcg-color);   
-    position: relative;
+        background: {
+            image: url('../img/bcg/bcg-header/header-vectors.png');
+            repeat: no-repeat;
+            size: cover;
+            position: center;
+        }
+        position: relative;
 
-    &::after {
-        position: absolute;
-        content: '';
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background: url('../img/bcg/bcg-header/top.png') no-repeat top right,url('../img/bcg/bcg-header/bottom.png') no-repeat bottom left;
-       
-        
-}
+        &::after {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background: url('../img/bcg/bcg-header/top.png') no-repeat top right,url('../img/bcg/bcg-header/bottom.png') no-repeat bottom left;
+        }
+        }
 
-    }
+
+// Варіант 2 - фонові вугли як лінійний градієнт (виникає конфлікт фонів);
+// header {
+//     background: {
+//         image: url('../img/bcg/bcg-header/header-vectors.png');
+//         repeat: no-repeat;
+//         size: cover;
+//         position: center;
+//     }
+//     position: relative;
+//     z-index: 2;
+
+//     &::after {
+//         content: '';
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         bottom: 0;
+//         right: 0;
+//         background: linear-gradient(5deg, var(--section-title-color) 0%, var(--section-title-color) 10%, var(--bcg-color) 10%,var(--bcg-color) 90%,  var(--section-title-color) 10%);
+//         z-index: 1;
+//     }
+// }
+
+//  Варіант 3 - фонові вугли як фон, але тоді фон з векторами накладається на градієнт;
+
+// header {
+//     background: {
+//         image: url('../img/bcg/bcg-header/header-vectors.png'), linear-gradient(5deg, var(--section-title-color) 0%, var(--section-title-color) 10%, var(--bcg-color) 10%,var(--bcg-color) 90%,  var(--section-title-color) 10%);
+//         -webkit-size: cover;
+//         size: cover;
+//     }
+// }
+
 
 .header-wrapper {
     padding: 180px 0;

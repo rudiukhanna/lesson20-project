@@ -77,8 +77,10 @@ h2 {
 }
 
 header {
-  background: url("../img/bcg/bcg-header/header-vectors.png") no-repeat center center/cover;
-  background-color: var(--bcg-color);
+  background-image: url("../img/bcg/bcg-header/header-vectors.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   position: relative;
 }
 header::after {
