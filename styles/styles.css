@@ -14,6 +14,11 @@
   --xl: 64px;
   --xxl: 115px;
   --max-width: 1920px;
+  --min-width: 1024px;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 
 .page {
@@ -29,6 +34,11 @@
   max-width: 1224px;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
+  .container {
+    margin: auto;
+  }
 }
 
 li {
@@ -59,6 +69,11 @@ a {
   transition: 1s;
   color: var(--contact-text-color);
 }
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
+  .link-button {
+    height: 66px;
+  }
+}
 
 h2 {
   margin: 0;
@@ -73,7 +88,15 @@ h2 {
 }
 
 .center {
-  margin: 50px 505px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+@media screen and (min-width: 1024px) and (max-width: 1920px) {
+  .center {
+    padding-bottom: 50px;
+    vertical-align: middle;
+  }
 }
 
 header {
@@ -99,6 +122,14 @@ header::after {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (min-width: 1024px) and (max-width: 1300px) {
+  .header-wrapper {
+    padding: 180px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 
 .header-content h1 {
   display: inline;
@@ -106,6 +137,13 @@ header::after {
   font-weight: 900;
   font-size: var(--xxl);
   line-height: 1.18;
+}
+@media screen and (min-width: 1024px) and (max-width: 1300px) {
+  .header-content h1 {
+    font-weight: 900;
+    font-size: var(--l);
+    line-height: 1;
+  }
 }
 
 .header-title-second {
@@ -116,6 +154,14 @@ header::after {
   line-height: 1;
   letter-spacing: 0.35em;
 }
+@media screen and (min-width: 1024px) and (max-width: 1300px) {
+  .header-title-second {
+    font-weight: 500;
+    font-size: var(--l);
+    line-height: 1;
+    letter-spacing: 0em;
+  }
+}
 
 .header-content p {
   margin: 0;
@@ -123,6 +169,12 @@ header::after {
   font-weight: 600;
   font-size: var(--s);
   line-height: 1.5;
+}
+@media screen and (min-width: 1024px) and (max-width: 1300px) {
+  .header-content p {
+    font-weight: 600;
+    font-size: var(--xs);
+  }
 }
 
 .header-links {
@@ -142,6 +194,12 @@ header::after {
 }
 .header-links .link-about:hover, .header-links .link-about:focus {
   text-decoration: underline;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1300px) {
+  .image-hero {
+    width: 345px;
+  }
 }
 
 .services {
