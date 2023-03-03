@@ -60,7 +60,7 @@ a {
 
 
 h2 {
-    margin: 0;
+    margin: -2px;
     padding-top: 65px;
     padding-bottom: 50px;
     text-align: center;
@@ -79,6 +79,13 @@ h2 {
     padding-bottom: 50px;
 }
 
+@mixin enlarge ($fill) {
+    animation-name: cardEnlarge;
+    animation-duration: 1s;
+    animation-fill-mode: $fill;
+}
+
+
 // Header
 // Варіант 1 - додавання цих кутків через псевдоелемент як фонові картинки;
 header {
@@ -90,6 +97,7 @@ header {
         }
         position: relative;
 
+        @media screen and (min-width: 768px) {
         &::after {
                 position: absolute;
                 content: '';
@@ -98,8 +106,9 @@ header {
                 bottom: 0;
                 right: 0;
                 background: url('../img/bcg/bcg-header/top.png') no-repeat top right,url('../img/bcg/bcg-header/bottom.png') no-repeat bottom left;
-        }
-        }
+            }
+        }   
+    }
 
 
 // Варіант 2 - фонові кутки як лінійний градієнт (виникає конфлікт фонів);
@@ -213,12 +222,6 @@ header {
     color: var(--secondary-color);
 }
 
-@mixin cardEnlarge ($fill) {
-    animation-name: cardEnlarge;
-    animation-duration: 2s;
-    animation-fill-mode: $fill;
-}
-
 .services-card {
     max-width: 288px;
     box-sizing: border-box;
@@ -229,7 +232,7 @@ header {
     &:hover {
         cursor: pointer;
         box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-        @include cardEnlarge($fill);
+        @include enlarge($fill);
     }
 }
 
@@ -341,7 +344,6 @@ header {
     }
     color: var(--contact-text-color);
     background-color: var(--secondary-color);
-    font-size: var(--m);
     cursor: pointer;
 
     &:hover {
