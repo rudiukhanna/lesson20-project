@@ -174,7 +174,7 @@
         height: 35px;
         padding-left: 15px;
         padding-right: 15px;
-        line-height: 2.3;
+        line-height: 2.2;
         font: {
             weight: 600;
             size: var(--xs);
@@ -419,6 +419,7 @@ h2 {
     ul {
         @media screen and (min-width: 320px) and (max-width: 539px) {
             margin-top: 40px;
+            padding: 10px;
         }
     }
 
@@ -428,7 +429,7 @@ h2 {
         } 
 
         @media screen and (min-width: 320px) and (max-width: 539px) {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
     }
 }
