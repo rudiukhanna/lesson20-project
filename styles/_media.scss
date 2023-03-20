@@ -16,11 +16,11 @@
  }
 }
 
-.header {
+ header {
     @media screen and (min-width: 320px) and (max-width: 767px) {
-        &::after {
-           background: none;
-        }
+      
+           background: url('../img/bcg/bcg-header/header-vectors.png'),
+                       var(--bcg-color);
     }
 }
 

@@ -84,22 +84,7 @@ h2 {
 }
 
 header {
-  background-image: url("../img/bcg/bcg-header/header-vectors.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-@media screen and (min-width: 768px) {
-  header::after {
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: url("../img/bcg/bcg-header/top.png") no-repeat top right, url("../img/bcg/bcg-header/bottom.png") no-repeat bottom left;
-  }
+  background: url("../img/bcg/bcg-header/top.png") no-repeat top right, url("../img/bcg/bcg-header/bottom.png") no-repeat bottom left, url("../img/bcg/bcg-header/header-vectors.png"), var(--bcg-color);
 }
 
 .header-wrapper {
@@ -347,8 +332,8 @@ header {
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  .header::after {
-    background: none;
+  header {
+    background: url("../img/bcg/bcg-header/header-vectors.png"), var(--bcg-color);
   }
 }
 
